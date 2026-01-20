@@ -1,74 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Apple - Inicio</title>
+    <meta name="description" content="Página principal sencilla sobre Apple" />
+
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --text: #1d1d1f;
+            --accent: #06c;
+            --dark: #000;
+            --card: #fff;
+            --border: #e5e5ea;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background: linear-gradient(135deg, #000, #333);
+            color: #fff;
+            padding: 3rem 1rem;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            font-weight: 800;
+        }
+
+        .logo {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background: radial-gradient(circle at 30% 30%, #fff 0 30%, #ccc 60%, transparent 61%);
+        }
+
+        h1 {
+            margin-top: 1rem;
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        header p {
+            max-width: 60ch;
+            color: #d1d1d6;
+        }
+
+        nav {
+            margin-top: 1rem;
+            display: flex;
+            gap: .75rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            background: #1c1c1e;
+            border: 1px solid #3a3a3c;
+            padding: .45rem .8rem;
+            border-radius: .5rem;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background: #2c2c2e;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: .9rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            padding: 1rem;
+            background: #f0f0f3;
+            border-bottom: 1px solid var(--border);
+            font-weight: 800;
+        }
+
+        .chip {
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border-radius: 4px;
+        }
+
+        .content {
+            padding: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            border-radius: .8rem;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,.05);
+        }
+
+        .card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: .9rem;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 1.5rem 1rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: .9rem;
+        }
+    </style>
 </head>
+
 <body>
-    <header id="cabecera" style="display: flex;">
-        <div>
-            <img src="https://i.postimg.cc/TwMkTX39/Apple.webp" alt="Logo pagina" width="75px">
+
+<header>
+    <div class="container">
+        <div class="brand">
+            <span class="logo"></span>
+            Apple Inicio
         </div>
-        <h2>Apple</h2>
-    </header>
-    <hr>
-    <nav style="display: flex; gap: 20px;">
-        <a href="/index.html">Inicio</a>
-        <a href="#" target="_blank">Nosotros</a>
-        <a href="#" target="_blank">Contacto</a>
-    </nav>
-    <hr>
-    <main>       
-        <hr>
-            <h2 style="text-align: center;">Nuestras especialidades</h2>
-            
-        <br>
-        <a href="#cabecera"><img src="https://i.postimg.cc/fWXCJ3bM/imgvolver.png" alt="Volver al inicio" width="20px" height="20px"></a>
-        <hr>
-        <h2 style="text-align: center;">Por qué elegirnos</h2>
-        <section id="por_que_elegirnos" style="display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; text-align: justify;">
-            <article style="width: 300px; border: 1px solid #000000; padding: 10px">
-                <div>
-                <h3 style="text-align: center;">Laboratorio de Diagnóstico Avanzado</h3>
-                <p>No cambiamos piezas por adivinar. Contamos con licencias originales de software de concesionario (VCDS, ISTA+, ODIS) que nos permiten leer la computadora de su auto a profundidad. Podemos programar módulos, calibrar sensores y solucionar fallas electrónicas complejas que otros talleres convencionales no logran detectar.</p>
-                <img src="https://i.postimg.cc/hjVCWhzS/img-Laboratorio.png" alt="Foto de laboratorio de diagnóstico" width="300px" height="160px">
-                </div>
-            </article>
-            <article style="width: 300px; border: 1px solid #000000; padding: 10px">
-                <div>
-                <h3 style="text-align: center;">Garantía y Calidad Alemana</h3>
-                <p>La calidad no es negociable en un auto de alta gama. Trabajamos exclusivamente con repuestos OEM (Fabricante de Equipo Original) importados directamente de Europa. Esto nos permite ofrecerle una garantía extendida de 12 meses o 20.000 km en cada reparación mayor, asegurando que su inversión esté protegida.</p>
-                <img src="https://i.postimg.cc/Kv00y6zx/imgcalidad.png" alt="Sello de garantía Alemana" width="200px" height="200px">
-                </div>
-            </article>
-            <article style="width: 300px; border: 1px solid #000000; padding: 10px">
-                <div>
-                <h3 style="text-align: center;">Política de Transparencia</h3>
-                <p>Generamos confianza con hechos, no con palabras. Usted recibirá reportes fotográficos y videos vía WhatsApp durante todo el proceso de reparación para que vea el estado real de su auto. Además, al entregarle su vehículo, le devolvemos las piezas antiguas sustituidas como prueba física del trabajo realizado.</p>
-                <img src="https://i.postimg.cc/4yBQscXQ/img-Transparencia.png" alt="Foto comprobando repuestos" width="300px" height="160px">
-                </div>
-            </article>
-            <article style="width: 300px; border: 1px solid #000000; padding: 10px">
-                <div>
-                <h3 style="text-align: center;">Eficiencia y Stock</h3>
-                <p>Entendemos que su tiempo vale oro. A diferencia de otros talleres que piden repuestos bajo pedido, nosotros mantenemos un stock permanente de los ítems de mayor rotación (pastillas, filtros, sensores) para reducir los tiempos de espera y entregarle su vehículo operativo en tiempo récord.</p>
-                <img src="https://i.postimg.cc/X7Ygxsgg/img-Eficiencia.png" alt="Foto de stock de la mecanica" width="300px" height="160px">
-                </div>
-            </article>
-        </section>
-        <br>
-        <a href="#cabecera"><img src="https://i.postimg.cc/fWXCJ3bM/imgvolver.png" alt="Volver al inicio" width="20px" height="20px"></a>
-        <hr>
-    </main>
-    <footer>
-        <address>Mecanica Alemana <strong>Quito, Ecuador:</strong> Avenida de la Republica</address><br>
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5642.423882453819!2d-78.48323427605575!3d-0.19083549326951044!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sec!4v1767967303439!5m2!1ses!2sec" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <h1>Todo sobre Apple</h1>
+        <p>
+            Un espacio sencillo para conocer la filosofía de Apple, sus productos
+            y el enfoque en diseño y experiencia de usuario.
+        </p>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="/pages/nosotros.html" target="_blank">Nosotros</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section>
+        <div class="section-header">
+            <span class="chip"></span>
+            <h2>Bienvenido</h2>
         </div>
-        mecanicalemana@contacto.com<br>
-        1800 Mecanica (123 000) <br>
-        <small>© 2026 Mecánica Alemana</small><br>
-    </footer>
+        <div class="content">
+            <p>
+                Apple es una de las marcas más influyentes en el mundo tecnológico.
+                Su enfoque en el diseño, el rendimiento y la integración entre
+                dispositivos ha marcado un antes y un después.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-header">
+            <span class="chip"></span>
+            <h2>Productos populares</h2>
+        </div>
+        <div class="content grid">
+            <article class="card">
+                <img src="https://picsum.photos/seed/mac/800/600" alt="MacBook">
+                <div class="card-body">
+                    <h3>MacBook</h3>
+                    <p>Potencia, diseño y eficiencia en un portátil.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://picsum.photos/seed/iphone/800/600" alt="iPhone">
+                <div class="card-body">
+                    <h3>iPhone</h3>
+                    <p>El smartphone que cambió la industria.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://picsum.photos/seed/watch/800/600" alt="Apple Watch">
+                <div class="card-body">
+                    <h3>Apple Watch</h3>
+                    <p>Tecnología y salud en tu muñeca.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Apple Fan Hub — Página Inicio</p>
+    </div>
+</footer>
+
 </body>
 </html>
