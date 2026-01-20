@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apple: Diseño, innovación y experiencia</title>
+    <meta name="description" content="Página temática sobre Apple: historia, productos icónicos, galería y contacto." />
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --text: #1d1d1f;
+            --accent: #06c;
+            /* azul Apple */
+            --dark: #000000;
+            --card: #ffffff;
+            --border: #e5e5ea;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #000, #333);
+            color: #fff;
+            padding: 3rem 1rem;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: .6rem;
+            color: #fff;
+            font-weight: 800;
+            letter-spacing: .3px;
+        }
+
+        .logo {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #fff 0 30%, #ccc 60%, #0000 61%);
+            border: 2px solid #fff;
+        }
+
+        h1 {
+            margin: .75rem 0 0;
+            font-size: clamp(2rem, 4.5vw, 3rem);
+        }
+
+        header p {
+            margin: .5rem 0 0;
+            max-width: 60ch;
+            color: #d1d1d6;
+        }
+
+        nav {
+            margin-top: 1rem;
+            display: flex;
+            gap: .75rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            background: #1c1c1e;
+            border: 1px solid #3a3a3c;
+            padding: .45rem .75rem;
+            border-radius: .5rem;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background: #2c2c2e;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        section {
+            margin: 2rem 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: .9rem;
+            overflow: hidden;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            background: #f0f0f3;
+            font-weight: 800;
+        }
+
+        .chip {
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            background: var(--accent);
+        }
+
+        .content {
+            padding: 1rem;
+        }
+
+        .timeline {
+            display: grid;
+            gap: .9rem;
+        }
+
+        .event {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: .75rem;
+            align-items: start;
+            padding: .75rem;
+            border: 1px dashed var(--border);
+            border-radius: .6rem;
+            background: #fafafa;
+        }
+
+        .year {
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        .grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: .8rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+        }
+
+        .card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        .card .card-body {
+            padding: .9rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: .2rem .5rem;
+            border-radius: .3rem;
+            font-size: .8rem;
+        }
+
+        form {
+            display: grid;
+            gap: .9rem;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        form .full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: 700;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: .7rem .8rem;
+            border: 1px solid var(--border);
+            border-radius: .6rem;
+            background: #fff;
+            font: inherit;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            justify-self: start;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: .7rem 1rem;
+            border-radius: .6rem;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        button:hover {
+            filter: brightness(1.1);
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1.5rem 1rem;
+            background: #000;
+            color: #fff;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #9fd1ff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">
+                <span class="logo" aria-hidden="true"></span>
+                Apple Fan Hub
+            </div>
+            <h1>Diseño, innovación y experiencia</h1>
+            <p>
+                Apple ha marcado la tecnología de consumo con productos que combinan diseño, rendimiento y ecosistema.
+                Explora su historia, mira productos icónicos y comparte tu interés por la marca.
+            </p>
+            <nav aria-label="Navegación principal">
+                <a href="#historia">Historia</a>
+                <a href="#galeria">Galería</a>
+                <a href="#productos">Productos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="historia" aria-labelledby="titulo-historia">
+            <div class="section-header">
+                <span class="chip" aria-hidden="true"></span>
+                <h2 id="titulo-historia">Historia de Apple</h2>
+            </div>
+            <div class="content">
+                <div class="timeline">
+                    <article class="event">
+                        <div class="year">1976</div>
+                        <p>Se funda Apple en California, iniciando con el Apple I, un ordenador ensamblado a mano.</p>
+                    </article>
+                    <article class="event">
+                        <div class="year">1984</div>
+                        <p>Presentación del Macintosh, popularizando la interfaz gráfica y el uso del ratón.</p>
+                    </article>
+                    <article class="event">
+                        <div class="year">2007</div>
+                        <p>Llega el iPhone, redefiniendo el smartphone con pantalla táctil y un ecosistema de apps.</p>
+                    </article>
+                    <article class="event">
+                        <div class="year">2015–hoy</div>
+                        <p>Expansión del ecosistema: Apple Watch, AirPods, servicios y chips diseñados por Apple.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" aria-labelledby="titulo-galeria">
+            <div class="section-header">
+                <span class="chip" aria-hidden="true"></span>
+                <h2 id="titulo-galeria">Galería</h2>
+            </div>
+            <div class="content">
+                <div class="grid" role="list">
+                    <figure class="card" role="listitem">
+                        <img src="https://picsum.photos/seed/apple1/800/600" alt="iPhone sobre mesa minimalista" />
+                        <figcaption class="card-body">
+                            <span class="badge">iPhone</span>
+                            Diseño minimalista y rendimiento móvil.
+                        </figcaption>
+                    </figure>
+                    <figure class="card" role="listitem">
+                        <img src="https://picsum.photos/seed/apple2/800/600" alt="MacBook en escritorio de trabajo" />
+                        <figcaption class="card-body">
+                            <span class="badge">Mac</span>
+                            Potencia y eficiencia para crear y trabajar.
+                        </figcaption>
+                    </figure>
+                    <figure class="card" role="listitem">
+                        <img src="https://picsum.photos/seed/apple3/800/600" alt="Apple Watch con correa deportiva" />
+                        <figcaption class="card-body">
+                            <span class="badge">Watch</span>
+                            Salud, notificaciones y estilo en tu muñeca.
+                        </figcaption>
+                    </figure>
+                    <figure class="card" role="listitem">
+                        <img src="https://picsum.photos/seed/apple4/800/600" alt="AirPods sobre fondo blanco" />
+                        <figcaption class="card-body">
+                            <span class="badge">AirPods</span>
+                            Audio inalámbrico y conexión instantánea.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" aria-labelledby="titulo-productos">
+            <div class="section-header">
+                <span class="chip" aria-hidden="true"></span>
+                <h2 id="titulo-productos">Productos destacados</h2>
+            </div>
+            <div class="content grid">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/apple5/800/600" alt="MacBook abierto mostrando pantalla" />
+                    <div class="card-body">
+                        <h3>MacBook</h3>
+                        <p>Portátil ligero con gran autonomía y chips de alto rendimiento para tareas creativas y
+                            profesionales.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/apple6/800/600" alt="iPad con lápiz digital" />
+                    <div class="card-body">
+                        <h3>iPad</h3>
+                        <p>Versatilidad para dibujar, estudiar y trabajar con una experiencia táctil fluida.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/apple7/800/600" alt="iPhone en primer plano" />
+                    <div class="card-body">
+                        <h3>iPhone</h3>
+                        <p>Cámara avanzada, rendimiento móvil y privacidad integrada en el sistema.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <div class="section-header">
+                <span class="chip" aria-hidden="true"></span>
+                <h2 id="titulo-contacto">Contacto</h2>
+            </div>
+            <div class="content">
+                <p>¿Quieres compartir tu proyecto, idea o colaboración relacionada con Apple? Escríbenos.</p>
+                <form action="#" method="post">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+                    </div>
+                    <div>
+                        <label for="email">Correo electrónico</label>
+                        <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+                    </div>
+                    <div class="full">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu idea o consulta..."
+                            required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p class="full" style="margin-top:.75rem; font-size:.9rem;">
+                    Nota: Esta es una página de demostración sin backend. El formulario no enviará datos reales.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Apple Fan Hub — Sitio no oficial creado por fans.</p>
+            <nav class="footer-links" aria-label="Enlaces de pie de página">
+                <a href="#historia">Historia</a>
+                <a href="#galeria">Galería</a>
+                <a href="#productos">Productos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
